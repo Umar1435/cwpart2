@@ -1,0 +1,44 @@
+div1 {
+    position: relative;
+    left: 30px;
+    top: 20px;
+}
+
+div2 {
+    position: relative;
+    left: 35px;
+}
+
+div3 {
+    position: relative;
+    left: 35px;
+}
+
+div4 {
+    position: relative;
+    left: 35px;
+}
+
+div5 {
+    position: relative;
+    left: 35px;
+    bottom: 30px;
+}
+
+div6 {
+    position: relative;
+    left: 35px;
+    bottom: 20px;
+}
+
+div7 {
+    position: relative;
+    left: 35px;
+    bottom: 10px;
+}
+
+div8 {
+    position: relative;
+    left: 35px;
+    bottom: 10px;
+}
