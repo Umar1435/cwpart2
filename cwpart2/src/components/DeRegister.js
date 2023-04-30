@@ -16,7 +16,7 @@ function DeRegister() {
             <div3> <InputField>First Name </InputField></div3>
             <div5><InputField>Surname </InputField></div5>
             <div7><InputField>NHS number </InputField></div7>
-            <div4><Button>Register </Button></div4>
+            <div4><Button>De-Register </Button></div4>
 
             <Footer />
         </>

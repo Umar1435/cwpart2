@@ -2,6 +2,7 @@ div1 {
     position: relative;
     left: 30px;
     top: 20px;
+    margin-top: 2.5em
 }
 
 div2 {
@@ -42,3 +43,11 @@ div8 {
     left: 35px;
     bottom: 10px;
 }
+
+div9 {
+    position: relative;
+    left: 35px;
+    bottom: 10px;
+    margin-top: 2.5em
+}
+
