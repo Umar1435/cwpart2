@@ -1,53 +1,29 @@
-div1 {
-    position: relative;
-    left: 30px;
-    top: 20px;
-    margin-top: 2.5em
+fieldset {
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: left;
+    margin-top: 100px;
+    margin-bottom: 90px;
+    padding-bottom: 200px;
+    height: 40vh;
+ 
 }
+ label {
+     font-size: 23px;
+ }
 
-div2 {
-    position: relative;
-    left: 35px;
-}
+ Input {
+     max-width:500px;
+ }
 
-div3 {
-    position: relative;
-    left: 35px;
-}
+ Select {
+     max-width: 200px;
+ }
 
-div4 {
-    position: relative;
-    left: 35px;
-}
+ button{
+     max-width: 120px;
+ }
 
-div5 {
-    position: relative;
-    left: 35px;
-    bottom: 30px;
-}
-
-div6 {
-    position: relative;
-    left: 35px;
-    bottom: 20px;
-}
-
-div7 {
-    position: relative;
-    left: 35px;
-    bottom: 10px;
-}
-
-div8 {
-    position: relative;
-    left: 35px;
-    bottom: 10px;
-}
-
-div9 {
-    position: relative;
-    left: 35px;
-    bottom: 10px;
-    margin-top: 2.5em
-}
-
+ heading{
+     margin-left: 100px;
+ }
