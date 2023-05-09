@@ -25,9 +25,9 @@ $userType = $data->userType;
 
 // Create the correct SQL query based on the user type
 if ($userType === 'option1') {
-    $sql = "SELECT * FROM patientLogin WHERE firstName = :firstName AND surname = :surname AND postcode = :postcode AND nhsNumber = :nhsNumber";
+    $sql = "SELECT * FROM patientLogin WHERE firstname = :firstname AND surname = :surname AND postcode = :postcode AND nhsNumber = :nhsNumber";
     $stmt = $conn->prepare($sql);
-    $stmt->bindParam(':firstName', $data->firstName);
+    $stmt->bindParam(':firstname', $data->firstName);
     $stmt->bindParam(':surname', $data->surname);
     $stmt->bindParam(':postcode', $data->postcode);
     $stmt->bindParam(':nhsNumber', $data->nhsNumber);

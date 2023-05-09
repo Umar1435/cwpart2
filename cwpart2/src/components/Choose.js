@@ -54,6 +54,7 @@ function Choose () {
             <div>
                 <h1>Dashboard</h1>
                 <p>Welcome to the dashboard!</p>
+                <u><GovUKTextLink to="/"><span>&#8592;</span>Back</GovUKTextLink></u>
             </div>
         );
     };
@@ -69,7 +70,7 @@ function Choose () {
         const [errors, setErrors] = useState({});
         const [isSubmitting, setIsSubmitting] = useState(false);
 
-        const history = useNavigate();
+        const navigate = useNavigate();
 
         const handleSubmit = async (event) => {
             event.preventDefault();
@@ -105,11 +106,11 @@ function Choose () {
             console.log(result);
 
             if (result.status === 'success') {
-                history.push('/dashboard');
+                navigate('/dashboard');
             } else {
                 alert(result.message);
             }
-        }, [firstName, surname, postcode, nhsNumber, username, password, history]);
+        }, [firstName, surname, postcode, nhsNumber, username, password, navigate]);
 
         useEffect(() => {
             if (Object.keys(errors).length === 0 && isSubmitting) {
@@ -169,7 +170,7 @@ function Choose () {
                             value={selectedOption}
                             onChange={(e) => setSelectedOption(e.target.value)}
                         >
-                            <option value="">Select user type</option>
+                            
                             <option value="option1">Patients</option>
                             <option value="option2">Doctors</option>
                             <option value="option3">Receptionsts</option>
@@ -293,7 +294,7 @@ function Choose () {
         const [errors, setErrors] = useState({});
         const [isSubmitting, setIsSubmitting] = useState(false);
 
-        const history = useNavigate();
+        const navigate = useNavigate();
 
         const handleSubmit = async (event) => {
             event.preventDefault();
@@ -329,11 +330,11 @@ function Choose () {
             console.log(result);
 
             if (result.status === 'success') {
-                history.push('/sign-in');
+                navigate('/sign-in');
             } else {
                 alert(result.message);
             }
-        }, [firstName, surname, postcode, nhsNumber, history]);
+        }, [firstName, surname, postcode, nhsNumber, navigate]);
 
         useEffect(() => {
             if (Object.keys(errors).length === 0 && isSubmitting) {
@@ -445,7 +446,7 @@ function Choose () {
         const [errors, setErrors] = useState({});
         const [isSubmitting, setIsSubmitting] = useState(false);
 
-        const history = useNavigate();
+        const navigate = useNavigate();
 
         const handleSubmit = async (event) => {
             event.preventDefault();
@@ -481,11 +482,11 @@ function Choose () {
             console.log(result);
 
             if (result.status === 'success') {
-                history.push('/sign-in');
+                navigate('/');
             } else {
                 alert(result.message);
             }
-        }, [firstName, surname, postcode, nhsNumber, history]);
+        }, [firstName, surname, postcode, nhsNumber, navigate]);
 
         useEffect(() => {
             if (Object.keys(errors).length === 0 && isSubmitting) {
@@ -508,7 +509,9 @@ function Choose () {
             }
 
             if (!postcode) {
-                errors.postcode = "Postcode name is required";
+                errors.postcode = "Postcode is required";
+            } else if (!/^(GIR 0AA|[A-PR-UWYZ]([0-9]{1,2}|([A-HK-Y][0-9]([0-9ABEHMNPRV-Y])?)|[0-9][A-HJKS-UW]))\s?[0-9][ABD-HJLNP-UW-Z]{2}$/i.test(postcode)) {
+                errors.postcode = "Invalid UK postcode";
             }
 
             if (!nhsNumber) {
